@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Info CV</title>
+  <!-- Font Awesome -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{ url_for('static', filename='css/mdb.min.css') }}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{{ url_for('static', filename='css/style_mdb.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  
+  <!--
+  <link rel="stylesheet" type="text/css" href="mdbpro/mdbpro.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+-->
+  
+  <link href="{{ url_for('static', filename='css/datepicker.min.css') }}" rel="stylesheet">
+  
+  <link href="css/select.css" href="{{ url_for('static', filename='css/select.css') }}" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+  
+  <div class="">
+
+          <!-- Default form register -->
+      <form class="text-center border border-light p-5" method ="post" action="#!">
+
+        <p class="h4 mb-4">Info CV</p>
+
+        <div class="form-row mb-4">
+            <div class="col">
+                <!-- First name -->
+                <input type="text" id="defaultRegisterFormFirstName" class="form-control" name="first_name" placeholder="First name">
+            </div>
+            <div class="col">
+                <!-- Last name -->
+                <input type="text" id="defaultRegisterFormLastName" class="form-control" name = "last_name" placeholder="Last name">
+            </div>
+        </div>
+
+        <div class="form-row mb-4">
+          <div class="col">
+              <!-- Title -->
+              <input type="text" id="defaultRegisterFormTitle" class="form-control mb-4" name = "title" placeholder="Title">
+          </div>
+          <div class="col">
+              <!-- E-mail -->
+              <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" name = "email" placeholder="E-mail">
+          </div>
+      </div>
+
+      <div class="form-row mb-4">
+        <div class="col">
+            <!-- Telephone -->
+            <input type="text" id="defaultRegisterFormTelephone" class="form-control mb-4" name = "telephone" placeholder="Telephone">
+        </div>
+        <div class="col">
+            <!-- Date Naissance -->
+            <input type="text" id="defaultRegisterFormDateNaissance" class="form-control mb-4" name = "date_naissance" placeholder="Date Naissance">
+        </div>
+    </div>
+
+
+    <div class="form-row mb-4" >
+      <div class="col">
+          <!-- Newsletter -->
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" checked id="education" onclick="displayPanel(id)">
+            <label class="custom-control-label" for="education">Education</label>
+        </div>
+      </div>
+
+      <div class="col">
+          
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="skills" onclick="displayPanel(id);">
+              <label class="custom-control-label" for="skills">Skills</label>
+          </div>
+        </div>
+  
+        <div class="col">
+            
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="work" onclick="displayPanel(id);">
+              <label class="custom-control-label" for="work">Work Experience and Interships</label>
+          </div>
+        </div>
+  
+        <div class="col">
+            
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="research" onclick="displayPanel(id);">
+              <label class="custom-control-label" for="research">Research and Projects</label>
+          </div>
+        </div>
+  
+        <div class="col">
+            
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="extra" onclick="displayPanel(id);">
+              <label class="custom-control-label" for="extra">Extra - Curricular</label>
+          </div>
+        </div>
+  
+        <div class="col">
+            
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="moocs" onclick="displayPanel(id);">
+              <label class="custom-control-label" for="moocs">Moocs</label>
+          </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="card" id="education-card">
+        <div class="card-body">
+          <h5 class="card-title">Education</h5>
+          <div class="form-row mb-4">
+            <div class="col">
+                <!-- First name -->
+                <input type="text" id="defaultRegisterFormFirstFormation" name ="formation" class="form-control" placeholder="Formation">
+            </div>
+            <div class="col">
+                <!-- First name -->
+                <input type="text" id="defaultRegisterFormFirstEcole" name = "ecole" class="form-control" placeholder="Ecole">
+            </div>
+            
+        </div>
+
+        <div class="form-row mb-4">
+
+            <div class="col">
+                <label for="dateFormD"><i class="fa fa-lock"></i> De ...</label>
+                <div class="input-group">
+                     <input id="dateFormD" type="text" name = "date_debut_formation" class="datepicker-here form-control"
+                            data-position="bottom right"
+                            data-language="fr" />
+                     <div class="input-group-append calendar-button">
+                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                     </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <label for="dateFormF"><i class="fa fa-lock"></i> A ...</label>
+                <div class="input-group">
+                     <input id="dateFormF" type="text" name = "date_fin_formation" class="datepicker-here form-control"
+                            data-position="bottom right"
+                            data-language="fr" />
+                     <div class="input-group-append calendar-button">
+                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                     </div>
+                </div>
+
+              </div>
+
+        </div>
+          
+        </div>
+      </div>
+
+      <!--Work Experience and Interships-->
+      <div class="card" id="work-card">
+          <div class="card-body">
+            <h5 class="card-title">Work Experience and Interships</h5>
+            <div class="form-row mb-4">
+              <div class="col">
+                  <!-- First name -->
+                  <input type="text" id="defaultRegisterFormFirstEntreprise" name = "entreprise" class="form-control" placeholder="Entreprise">
+              </div>
+              <div class="col">
+                  <!-- First name -->
+                  <input type="text" id="defaultRegisterFormFirstPoste" name = "poste" class="form-control" placeholder="Poste">
+              </div>
+
+              <div class="col">
+                  <!-- First name -->
+                  <input type="text" id="defaultRegisterFormFirstTravailFait" name = "travail_fait" class="form-control" placeholder="Travail Effectué">
+              </div>
+              
+          </div>
+  
+          <div class="form-row mb-4">
+  
+              <div class="col">
+                  <label for="dateWorkD"><i class="fa fa-lock"></i> De ...</label>
+                  <div class="input-group">
+                       <input id="dateWorkD" type="text" name = "date_debut_work" class="datepicker-here form-control"
+                              data-position="bottom right"
+                              data-language="fr" />
+                       <div class="input-group-append calendar-button">
+                           <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                       </div>
+                  </div>
+  
+              </div>
+  
+              <div class="col">
+                  <label for="dateWorkF"><i class="fa fa-lock"></i> A ...</label>
+                  <div class="input-group">
+                       <input id="dateWorkF" type="text" name = "date_fin_work" class="datepicker-here form-control"
+                              data-position="bottom right"
+                              data-language="fr" />
+                       <div class="input-group-append calendar-button">
+                           <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                       </div>
+                  </div>
+  
+                </div>
+  
+          </div>
+            
+          </div>
+        </div>
+
+
+        <!--Research and Projects-->
+      <div class="card" id="research-card">
+          <div class="card-body">
+            <h5 class="card-title">Research and Projects</h5>
+            <div class="form-row mb-4">
+              <div class="col">
+                  <!-- First name -->
+                  <input type="text" id="defaultRegisterFormFirstNomProject" name = "nom_project" class="form-control" placeholder="Nom Project">
+              </div>
+              <div class="col">
+                  <!-- First name -->
+                  <input type="text" id="defaultRegisterFormFirstDescription" name = "description" class="form-control" placeholder="Description">
+              </div>
+              
+          </div>
+  
+          <div class="form-row mb-4">
+  
+              <div class="col">
+                  <label for="dateProjD"><i class="fa fa-lock"></i> De ...</label>
+                  <div class="input-group">
+                       <input id="dateProjD" type="text" name = "date_debut_project" class="datepicker-here form-control"
+                              data-position="bottom right"
+                              data-language="fr" />
+                       <div class="input-group-append calendar-button">
+                           <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                       </div>
+                  </div>
+  
+              </div>
+  
+              <div class="col">
+                  <label for="dateProjF"><i class="fa fa-lock"></i> A ...</label>
+                  <div class="input-group">
+                       <input id="dateProjF" type="text" name = "date_fin_project" class="datepicker-here form-control"
+                              data-position="bottom right"
+                              data-language="fr" />
+                       <div class="input-group-append calendar-button">
+                           <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                       </div>
+                  </div>
+  
+                </div>
+  
+          </div>
+            
+          </div>
+        </div>
+        <br/>
+
+        <div class="form-row mb-4">
+
+            <div class="form-group col" id="skills-card">
+                <label for="exampleFormControlTextareaSkills">Skills</label>
+                <textarea class="form-control" id="exampleFormControlTextareaSkills" name = "skills" rows="10"></textarea>
+              </div>
+
+              <div class="form-group col" id="moocs-card">
+                  <label for="exampleFormControlTextareaMoocs">Moocs</label>
+                  <textarea class="form-control rounded-0" id="exampleFormControlTextareaMoocs" name = "moocs" rows="10"></textarea>
+                </div>
+
+                <div class="form-group col" id="extra-card">
+                    <label for="exampleFormControlTextareaExtra">Extra - Curricular</label>
+                    <textarea class="form-control rounded-0" id="exampleFormControlTextareaExtra" name ="extra" rows="10"></textarea>
+                  </div>
+
+                
+
+        </div>
+
+
+        
+    
+    
+
+
+       
+
+       
+
+        <!-- Sign up button -->
+        <button class="btn btn-info my-4 btn-block" type="submit">Envoyer</button>
+
+        <hr>
+
+
+      </form>
+      <!-- Default form register -->    
+        
+
+  </div>
+    
+
+     
+
+
+
+
+
+  <!-- /Start your project here-->
+  <script>
+      
+  </script>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+ 
+  
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+<!--
+  <script type="text/javascript" src="mdbpro/jquery-3.3.1.min.js"></script>
+ <script type="text/javascript" src="mdbpro/popper.min.js"></script>
+  <script type="text/javascript" src="mdbpro/compiled.min.js"></script>
+-->
+  
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
+
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/datepicker.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/datepicker.fr.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/js_all.js') }}"></script>
+  <script>
+    
+      </script>
+  
+</body>
+
+</html>

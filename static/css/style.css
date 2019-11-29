@@ -1,0 +1,187 @@
+
+.form-connexion{
+	width: 30%;
+ 	margin-left: auto;
+ 	margin-right: auto; 
+ 	background-color: white;
+ 	border-radius: 10px;
+ 	margin-top:10%;
+}
+
+.logo{
+	height: 10px;
+}
+
+.header{
+	height: 10%;
+}
+
+.icone{
+	width: 98%;
+	background-color: red;
+}
+
+.icone > div{
+	/*margin-left: auto; 
+	margin-left: 1em;
+	padding-right: 1em;*/ 
+	border-right: solid thin rgb(194, 203, 206); 
+	text-align: center;
+	padding-top: 7px;
+	width: 80%;
+
+}
+
+.bt-menu{
+	margin-top: 0px;
+	padding-top: 0px;
+	height: 60px;
+
+}
+
+.fa-play-circle{
+	color: green;
+}
+
+.fa-stop-circle{
+	color: pink;
+}
+
+.fa-plus{
+	color:rgb(0, 204, 255);
+}
+
+body{
+	width: 100%;
+}
+
+
+
+.title-style{
+	text-align: left;
+	width: 100%;
+	padding:0.1em;
+	line-height: 1.2em;
+	font-size: 1em;
+	border:solid #ff6600 thin;
+
+}
+.capteur-style{
+	font-weight: bold;
+	width: 98%;
+	text-align: center;
+	font-size: 0.6em;
+	background-color: rgb(34,102,102);
+	color:white;
+	margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+	
+}
+
+.nomarging{
+   margin:0em !important;
+}
+.size-text{
+	font-size: 4em;
+	text-align: left;
+}
+
+li>a{
+	color:white;
+}
+
+.fa-play-circle, .fa-stop-circle, .fa-plus, .fa-times{
+	cursor: pointer;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: rgb(34,102,102);/*url('contrasticon.png');*/
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: rgb(34,102,102);/*url('contrasticon.png');*/
+    cursor: pointer;
+}
+
+.panel-title{
+	display: inline;
+	font-size: 1.2em;
+}
+
+li>span{
+	font-size: 0.8em;
+}
+
+.btn-editStation{
+	position:absolute; 
+	right:10px;
+	top:0px;
+	width: 15em;
+	
+}
+.panel-heading{
+	height: 2em;
+}
+
+input::placeholder{
+	color:black !important;
+}
+.butSearch{
+	background-color: rgb(34,102,102) !important;
+	color:black !important;
+}
+.datepickers-container{
+	z-index: 99999 !important;
+}
+
+#myTabJust li a.active{
+	background-color: rgb(132, 180, 180);
+}
+
+.btConnection{
+	width:80% !important;
+	min-width: 10em !important;
+}
+
+.fa-circle{
+	padding-left: 0.1em;
+	padding-right: 1em;
+	/*margin-left: 0.3em;
+	margin: 0.5em;*/
+}
+
+#typeCapteur{
+	
+}
